@@ -16,6 +16,7 @@ import profileRouter from "./routes/profileRouter";
 import setupSwagger from "./swagger";
 import categoryRouter from "./routes/categoryRouter";
 import serviceRouter from "./routes/serviceRouter";
+import orderRouter from "./routes/orderRouter";
 
 const { default: loggerWinston } = require("./config/winston");
 
@@ -69,6 +70,7 @@ app.use("/v1/auth", authRouter);
 app.use("/v1/profile", profileRouter);
 app.use("/v1/category", categoryRouter);
 app.use("/v1/service", serviceRouter);
+app.use("/v1/order", orderRouter);
 
 app.listen(process.env.PORT || 3000, () => {
   loggerWinston.info("Server listening on port: " + (process.env.PORT || 3000));

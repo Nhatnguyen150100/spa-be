@@ -101,7 +101,7 @@ categoryRouter.put(
  */
 categoryRouter.get(
   "/:id",
-  tokenMiddleware.verifyTokenAdmin,
+  tokenMiddleware.verifyToken,
   categoryController.getCategoryDetail
 );
 
@@ -140,7 +140,7 @@ categoryRouter.get(
  */
 categoryRouter.get(
   "/",
-  tokenMiddleware.verifyTokenAdmin,
+  tokenMiddleware.verifyToken,
   categoryController.getAllCategories
 );
 

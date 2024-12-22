@@ -125,7 +125,7 @@ serviceRouter.put(
  */
 serviceRouter.get(
   "/:id",
-  tokenMiddleware.verifyTokenAdmin,
+  tokenMiddleware.verifyToken,
   serviceController.getServiceDetail
 );
 
@@ -166,7 +166,7 @@ serviceRouter.get(
  */
 serviceRouter.get(
   "/",
-  tokenMiddleware.verifyTokenAdmin,
+  tokenMiddleware.verifyToken,
   serviceController.getAllServices
 );
 
