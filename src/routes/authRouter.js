@@ -40,8 +40,8 @@ const authRouter = express.Router();
  */
 authRouter.post("/login", authController.login);
 
-authRouter.get("/google", passportController.authenticateByGoogle);
-authRouter.get("/google/callback", passportController.authenticateCallback);
+// authRouter.get("/google", passportController.authenticateByGoogle);
+// authRouter.get("/google/callback", passportController.authenticateCallback);
 
 /**
  * @swagger
