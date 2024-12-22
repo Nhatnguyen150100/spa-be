@@ -14,7 +14,7 @@ const authRouter = express.Router();
 
 /**
  * @swagger
- * /login:
+ * /v1/auth/login:
  *   post:
  *     tags: [Auth]
  *     summary: Đăng nhập
@@ -26,10 +26,12 @@ const authRouter = express.Router();
  *           schema:
  *             type: object
  *             properties:
- *               username:
+ *               email:
  *                 type: string
+ *                 example: "user1@gmail.com"
  *               password:
  *                 type: string
+ *                 example: "password"
  *     responses:
  *       200:
  *         description: Đăng nhập thành công
@@ -43,7 +45,7 @@ authRouter.get("/google/callback", passportController.authenticateCallback);
 
 /**
  * @swagger
- * /register:
+ * /v1/auth/register:
  *   post:
  *     tags: [Auth]
  *     summary: Đăng ký tài khoản
@@ -55,12 +57,12 @@ authRouter.get("/google/callback", passportController.authenticateCallback);
  *           schema:
  *             type: object
  *             properties:
- *               username:
- *                 type: string
  *               password:
  *                 type: string
+ *                 example: "password"
  *               email:
  *                 type: string
+ *                 example: "user2@gmail.com"
  *     responses:
  *       201:
  *         description: Đăng ký thành công

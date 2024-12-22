@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const DEFAULT_CONFIG_DB = {
-  DB_DATABASE: "db_badminton_web",
+  DB_DATABASE: "db_spa",
   DB_USERNAME: "root",
   DB_PASSWORD: "password",
   DB_HOST: "localhost",

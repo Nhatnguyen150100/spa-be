@@ -9,12 +9,21 @@ const swaggerOptions = {
     info: {
       title: "API Documentation",
       version: "1.0.0",
-      description: "API thông tin mô tả",
+      description: "API thông tin mô tả web spa",
+    },
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
+        },
+      },
     },
     servers: [
       {
         url: `${process.env.BASE_URL_SERVER}`,
-        description: "My API Documentation",
+        description: "API Documentation for Spa backend",
       },
     ],
   },

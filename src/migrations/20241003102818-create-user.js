@@ -32,8 +32,8 @@ module.exports = {
       },
       role: {
         allowNull: false,
-        type: Sequelize.ENUM,
-        defaultValue: "PENDING_APPROVAL",
+        type: Sequelize.ENUM("USER", "ADMIN"),
+        defaultValue: "USER",
       },
       createdAt: {
         allowNull: false,

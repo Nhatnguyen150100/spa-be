@@ -7,13 +7,13 @@ cd src
 ## Migrate database
 
 ```
-npx sequelize-cli db:migrate
+npm run migrate
 ```
 
 ## Seeder database
 
 ```
-npx sequelize-cli db:seed:all
+npm run seed
 ```
 
 ## Start project
