@@ -28,7 +28,7 @@ const authRouter = express.Router();
  *             properties:
  *               email:
  *                 type: string
- *                 example: "user1@gmail.com"
+ *                 example: "admin@gmail.com"
  *               password:
  *                 type: string
  *                 example: "password"

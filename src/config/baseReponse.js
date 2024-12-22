@@ -10,8 +10,8 @@ export class BaseResponse {
 
 export class BaseResponseList extends BaseResponse {
   constructor({ status, list, totalCount, message }) {
-    const data = { content: list, totalCount }
-    super({ status, data, message });
+    const data = { content: list, totalCount };
+    super({ status: DEFINE_STATUS_RESPONSE.SUCCESS, data, message });
   }
 }
 

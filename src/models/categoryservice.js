@@ -11,13 +11,13 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       CategoryService.belongsTo(models.Service, {
         foreignKey: { name: "serviceId", allowNull: false },
-        as: "category",
+        as: "service",
         targetKey: "id",
         through: { CategoryService },
       });
       CategoryService.belongsTo(models.Category, {
         foreignKey: { name: "categoryId", allowNull: false },
-        as: "service",
+        as: "category",
         targetKey: "id",
         through: { CategoryService },
       });

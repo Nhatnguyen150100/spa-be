@@ -61,6 +61,7 @@ const profileService = {
             })
           );
         }
+        delete user.password;
         return resolve(
           new BaseSuccessResponse({
             data: user,
